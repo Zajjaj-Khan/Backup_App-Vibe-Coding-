@@ -17,7 +17,7 @@ export default function App() {
     const fetchedAssets = await MediaLibrary.getAssetsAsync({
      mediaType: [MediaLibrary.MediaType.photo, MediaLibrary.MediaType.video], // include both
       sortBy: [[MediaLibrary.SortBy.creationTime, false]], // descending (most recent)
-      first: 3, 
+      first: 100, 
     });
 
     setAssets(fetchedAssets?.assets);
